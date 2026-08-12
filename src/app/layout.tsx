@@ -36,6 +36,17 @@ export const metadata: Metadata = {
     "Boutique Travel Agency",
     "Custom Travel Planning",
   ],
+  icons: {
+    icon: [
+      { url: "/logo.jpg", type: "image/jpeg" },
+      { url: "/logo.jpg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/logo.jpg", sizes: "16x16", type: "image/jpeg" },
+    ],
+    shortcut: ["/logo.jpg"],
+    apple: [
+      { url: "/logo.jpg", sizes: "180x180", type: "image/jpeg" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -48,6 +59,10 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakartaSans.variable} ${inter.variable} ${caveat.variable} ${pacifico.variable}`}
     >
+      <head>
+        <link rel="icon" href="/logo.jpg" type="image/jpeg" sizes="any" />
+        <link rel="apple-touch-icon" href="/logo.jpg" />
+      </head>
       <body className="antialiased bg-[#FFF8ED] text-[#2C2640] selection:bg-[#FCB040] selection:text-[#2C2640]">
         {children}
       </body>
